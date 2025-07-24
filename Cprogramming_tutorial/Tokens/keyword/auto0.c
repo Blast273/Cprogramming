@@ -1,7 +1,13 @@
 #include <stdio.h>
 
-int main () { 
+int add() {
+	auto int x = 10;
+	auto int y = 8;
+	return x+y;
+}
 
+int main () { 
+	printf("number: %d\n", add());
 	/* Creating variables using auto 
 	 * achiving both internal linkage 
 	 * and external linkage  
@@ -55,7 +61,14 @@ int main () {
 	 * static function: 
 	 * 		1. scope : file-level (not visible outside the current source file)
 	 * 		2. linkage : internal 
-	 * 		3. lifetime : entire program duration  
+	 * 		3. lifetime : entire program duration*/
+
+	/* scope, linkage, and lifetime are fundamental properties of variables and function in C,
+	 * not just those declared with static, auto, extern, or register.
+	 */
+
+	auto int age = 25;
+        printf("age: %d \n", age);
 	return 0;
 
 }
